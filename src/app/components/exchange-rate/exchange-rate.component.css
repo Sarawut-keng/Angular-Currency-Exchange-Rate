@@ -1,3 +1,32 @@
+h4, mat-label, mat-select {
+	color: #edf5e1;
+	font-family: 'Poppins', sans-serif;
+}
+mat-option {
+	color: #379683;
+	font-family: 'Poppins', sans-serif;
+}
+input, input::placeholder {
+	color: #379683;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+}
+.mat-select-value-text, .ng-tns-c81-1, .ng-star-inserted, .mat-select-min-line {
+	color: #379683 !important;
+	font-family: 'Poppins', sans-serif;
+}
+::ng-deep .mat-select-value {
+	color: #379683;
+	font-weight: 700;
+	padding: 5px;
+}
+::ng-deep .mat-input-element {
+	padding: 0px 5px 5px 10px;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+	background-color: #edf5e1;
+}
 
 /* To set the space between currency and amount of money*/
 
@@ -16,4 +45,12 @@ input.currency-amount::-webkit-inner-spin-button {
 
 .currency-amount {
 	text-align: right;
+}
+
+.button {
+	padding: 16px;
+}
+.button button {
+	background-color: #8ee4af;
+	color: #05386b;
 }
