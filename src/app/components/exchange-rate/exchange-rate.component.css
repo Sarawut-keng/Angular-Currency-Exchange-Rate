@@ -1,11 +1,19 @@
+
+/* To set the space between currency and amount of money*/
+
 mat-form-field {
 	margin-left: 10px;
 }
+
+/* To get rid of up and down spin */
 
 input.currency-amount::-webkit-outer-spin-button,
 input.currency-amount::-webkit-inner-spin-button {
 	display: none;
 }
+
+/* display currency-amount */
+
 .currency-amount {
 	text-align: right;
 }

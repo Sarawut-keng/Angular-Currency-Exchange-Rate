@@ -3,31 +3,30 @@
 		<h4>From</h4>
 		<mat-form-field appearance="fill">
 			<mat-label>Country Code</mat-label>
-			<mat-select formControlName='currencyCode'>
-				<mat-option *ngFor="let code of countryCode" [value]='code'>
+			<mat-select formControlName='fromCurrencyCode'>
+				<mat-option *ngFor="let code of currencyCode" [value]='code'>
 					{{ code }}
 				</mat-option>
 			</mat-select>
 		</mat-form-field>
 		<mat-form-field appearance="fill">
-			<mat-label>Enter amount of currency</mat-label>
-			<input matInput formControlName='currencyAmount' class="currency-amount" type="number" placeholder="0">
+			<mat-label>Enter amount of money</mat-label>
+			<input matInput formControlName='fromCurrencyAmount' class="currency-amount" type="number" placeholder="0">
 		</mat-form-field>
 		<h4>Convert to</h4>
 		<mat-form-field appearance="fill">
 			<mat-label>Country Code</mat-label>
-			<mat-select formControlName='convertedCode'>
-				<mat-option *ngFor="let code of countryCode" [value]='code'>
+			<mat-select formControlName='toCurrencyCode'>
+				<mat-option *ngFor="let code of currencyCode" [value]='code'>
 					{{ code }}
 				</mat-option>
 			</mat-select>
 		</mat-form-field>
 		<mat-form-field appearance="fill">
-			<mat-label>Enter amount of currency</mat-label>
-			<input matInput formControlName='convertedAmount' class="currency-amount" type="number" placeholder="0">
+			<input matInput formControlName='toCurrencyAmount' class="currency-amount" type="number" min="0" value="{{ convertedValue }}" readonly>
 		</mat-form-field>
 		<div class="button">
-			<button mat-raised-button [disabled]='form.invalid' (click)='convertButton()'>Convert</button>
+			<button mat-raised-button [disabled]='form.invalid' (click)="convertButton()">Convert</button>
 		</div>
 	</form>
 </div>
