@@ -1,0 +1,11 @@
+mat-form-field {
+	margin-left: 10px;
+}
+
+input.currency-amount::-webkit-outer-spin-button,
+input.currency-amount::-webkit-inner-spin-button {
+	display: none;
+}
+.currency-amount {
+	text-align: right;
+}

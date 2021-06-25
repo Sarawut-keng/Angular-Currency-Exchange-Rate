@@ -1,0 +1,33 @@
+<div class="form-box">
+	<form [formGroup]='form'>
+		<h4>From</h4>
+		<mat-form-field appearance="fill">
+			<mat-label>Country Code</mat-label>
+			<mat-select formControlName='currencyCode'>
+				<mat-option *ngFor="let code of countryCode" [value]='code'>
+					{{ code }}
+				</mat-option>
+			</mat-select>
+		</mat-form-field>
+		<mat-form-field appearance="fill">
+			<mat-label>Enter amount of currency</mat-label>
+			<input matInput formControlName='currencyAmount' class="currency-amount" type="number" placeholder="0">
+		</mat-form-field>
+		<h4>Convert to</h4>
+		<mat-form-field appearance="fill">
+			<mat-label>Country Code</mat-label>
+			<mat-select formControlName='convertedCode'>
+				<mat-option *ngFor="let code of countryCode" [value]='code'>
+					{{ code }}
+				</mat-option>
+			</mat-select>
+		</mat-form-field>
+		<mat-form-field appearance="fill">
+			<mat-label>Enter amount of currency</mat-label>
+			<input matInput formControlName='convertedAmount' class="currency-amount" type="number" placeholder="0">
+		</mat-form-field>
+		<div class="button">
+			<button mat-raised-button [disabled]='form.invalid' (click)='convertButton()'>Convert</button>
+		</div>
+	</form>
+</div>
